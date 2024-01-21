@@ -4,11 +4,11 @@ import NoteItem from "./NoteItem";
 
 const Notes = () => {
   const context = useContext(noteContext);
-  const { notes, setNotes } = context;
+  const { notes, addnote } = context;
   return (
     <div className="row">
       {notes.map((note) => {
-        return <NoteItem note={note}></NoteItem>;
+        return <NoteItem key={note._id} note={note}></NoteItem>;
       })}
     </div>
   );
